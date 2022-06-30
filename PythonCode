@@ -18,3 +18,24 @@ strong=20
 normal=10
 hard=20
 biasa=10
+
+
+import time, random
+
+print("Welcome to Game Hero")
+print("Please choose your character")
+print("Are you a Hero")
+print("or")
+print("Are you a Magician?")
+watak=["hero","magician"]
+hero=200
+magic=100
+def main():     
+    print("Choose your character now:")
+    x = random.choice(watak)
+    if x==hero:
+        print("You are a Hero!")
+    elif x==magic:
+        print("You are a magician")
+
+main()
