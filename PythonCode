@@ -5,6 +5,7 @@ Enemy=int(300)
 Attack_Superb=int(50)
 Attack_Strong=int(30)
 Attack_Normal=int(10)
+EnemyAttackList=[50, 30, 10]
 def subtract(x,y):
     return x-y
 
@@ -13,18 +14,53 @@ print("Please choose your character")
 print("Are you a Hero")
 print("or")
 print("Are you a Magician?")
+def character():
+    watak = input("Choose your character :")
+    if watak == "Hero":
+        print("You are a Hero. Your HP is 100. You attack stronger than Magician")
+    else:
+        print("You are a Magician. Your HP is 200 but your attack not powerful than Hero.")
+    fight()
 def fight():
     global Enemy
+    global Hero
     print("You are now facing a Enemy")
     while Enemy != 0:
         pilih = input("Choose your attack type(Superb/Strong/Normal")
         if pilih == "Superb":
             Enemy =subtract(Enemy, Attack_Superb)
             print(Enemy)
+            enemyfightback()
         elif pilih == "Strong":
             Enemy =subtract(Enemy, Attack_Strong)
             print(Enemy)
+            enemyfightback()
         elif pilih == "Normal":
-            Enemy =subtract(Enemy, Attack_Normal)
+            Enemy =subtract(Enemy, Attack_Superb)
             print(Enemy)
-fight()
+            enemyfightback()
+def enemyfightback():
+    global Enemy
+    global Hero
+    global Magician
+    print("The Enemy fight back")
+    while Hero != 0:
+        enemyattack = random.choice(EnemyAttackList)
+        print("The value of the enemy attack is" + str(enemyattack))
+        if enemyattack == "50":
+            Hero = subtract(Hero, 50)
+            print(Hero)
+            break
+            fight()
+        elif enemyattack == "30":
+            Hero = subtract(Hero, 30)
+            print(Hero)
+            break
+            fight()
+        elif enemyattack == "10":
+            Hero = subtract(Hero, 10)
+            print(Hero)
+            break
+            fight()
+    fight()
+character()
