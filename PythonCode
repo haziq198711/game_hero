@@ -1,4 +1,5 @@
 import random
+
 Hero=int(100)
 Magician=int(200)
 Enemy=int(300)
@@ -31,16 +32,19 @@ def fight():
         pilih = input("Choose your attack type(Superb/Strong/Normal) :")
         if pilih == "Superb":
             Enemy =subtract(Enemy, Attack_Superb)
+            print("")
             print("The enemy HP is now",Enemy)
             print("")
             enemyfightback()
         elif pilih == "Strong":
             Enemy =subtract(Enemy, Attack_Strong)
+            print("")
             print("The enemy HP is now",Enemy)
             print("")
             enemyfightback()
         elif pilih == "Normal":
             Enemy =subtract(Enemy, Attack_Superb)
+            print("")
             print("The enemy HP is now",Enemy)
             print("")
             enemyfightback()
