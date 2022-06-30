@@ -29,38 +29,40 @@ def fight():
         pilih = input("Choose your attack type(Superb/Strong/Normal")
         if pilih == "Superb":
             Enemy =subtract(Enemy, Attack_Superb)
-            print(Enemy)
+            print("The enemy HP is now",Enemy)
             enemyfightback()
         elif pilih == "Strong":
             Enemy =subtract(Enemy, Attack_Strong)
-            print(Enemy)
+            print("The enemy HP is now",Enemy)
             enemyfightback()
         elif pilih == "Normal":
             Enemy =subtract(Enemy, Attack_Superb)
-            print(Enemy)
+            print("The enemy HP is now",Enemy)
             enemyfightback()
+    else:
+        print("You are the winner!")
 def enemyfightback():
     global Enemy
     global Hero
     global Magician
     print("The Enemy fight back")
     while Hero != 0:
-        enemyattack = random.choice(EnemyAttackList)
+        enemyattack = random.choice([50,30,10])
         print("The value of the enemy attack is" + str(enemyattack))
+        print("Now is your turn to attack")
+        break
+        print(Hero)
         if enemyattack == "50":
             Hero = subtract(Hero, 50)
             print(Hero)
             break
-            fight()
         elif enemyattack == "30":
             Hero = subtract(Hero, 30)
             print(Hero)
             break
-            fight()
         elif enemyattack == "10":
             Hero = subtract(Hero, 10)
             print(Hero)
             break
-            fight()
     fight()
 character()
