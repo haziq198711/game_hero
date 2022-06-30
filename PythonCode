@@ -25,7 +25,7 @@ def fight():
     global Enemy
     global Hero
     print("You are now facing a Enemy")
-    while Enemy != 0:
+    while Enemy > 0:
         pilih = input("Choose your attack type(Superb/Strong/Normal")
         if pilih == "Superb":
             Enemy =subtract(Enemy, Attack_Superb)
