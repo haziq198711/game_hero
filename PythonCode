@@ -18,15 +18,17 @@ def character():
     watak = input("Choose your character :")
     if watak == "Hero":
         print("You are a Hero. Your HP is 100. You attack stronger than Magician")
+        print("")
     else:
         print("You are a Magician. Your HP is 200 but your attack not powerful than Hero.")
+        print("")
     fight()
 def fight():
     global Enemy
     global Hero
     print("You are now facing a Enemy")
     while Enemy > 0:
-        pilih = input("Choose your attack type(Superb/Strong/Normal")
+        pilih = input("Choose your attack type(Superb/Strong/Normal) :")
         if pilih == "Superb":
             Enemy =subtract(Enemy, Attack_Superb)
             print("The enemy HP is now",Enemy)
@@ -52,7 +54,7 @@ def enemyfightback():
     print("")
     while Hero != 0:
         enemyattack = random.choice([50,30,10])
-        print("The value of the enemy attack is" + str(enemyattack))
+        print("The value of the enemy attack is " + str(enemyattack))
         print("")
         print("Now is your turn to attack")
         print("")
