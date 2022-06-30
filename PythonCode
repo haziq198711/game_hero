@@ -22,7 +22,9 @@ def fight():
             Enemy =subtract(Enemy, Attack_Superb)
             print(Enemy)
         elif pilih == "Strong":
-            print (subtract(Enemy,Attack_Strong))
+            Enemy =subtract(Enemy, Attack_Strong)
+            print(Enemy)
         elif pilih == "Normal":
-            print (subtract(Enemy,Attack_Normal))
+            Enemy =subtract(Enemy, Attack_Normal)
+            print(Enemy)
 fight()
