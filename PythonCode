@@ -7,3 +7,14 @@ print("boleh x")
 print("Choose your character")
 print(
 
+def (attack
+
+
+list_att=["super,strong,normal"]
+list_def=["hard,biasa"]
+
+super=50
+strong=20
+normal=10
+hard=20
+biasa=10
