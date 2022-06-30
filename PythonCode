@@ -14,21 +14,15 @@ print("Are you a Hero")
 print("or")
 print("Are you a Magician?")
 def fight():
+    global Enemy
     print("You are now facing a Enemy")
     while Enemy != 0:
         pilih = input("Choose your attack type(Superb/Strong/Normal")
         if pilih == "Superb":
-            print(subtract(Enemy, Attack_Superb))
+            Enemy =subtract(Enemy, Attack_Superb)
+            print(Enemy)
         elif pilih == "Strong":
             print (subtract(Enemy,Attack_Strong))
         elif pilih == "Normal":
             print (subtract(Enemy,Attack_Normal))
-    
-def main():
-    choice = input ("Choose Your Character :")
-    if choice == 'Hero':
-        print("You are a hero!")
-    elif choice == "Magician":
-        print("You are a Magician!")
-    fight()
-main()
+fight()
